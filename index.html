@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Lawn Service Website</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1 id="logo">Lawn Service</h1>
+      <nav id="main-nav">
+        <ul>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#videos">Videos</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Fill out the form below to get in touch:</p>
+        <form id="contact-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message"></textarea>
+          <button type="submit" id="submit-btn">Send</button>
+        </form>
+      </section>
+      <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-container" id="gallery-container">
+          <img src="image1.jpg" alt="Lawn Image 1">
+          <img src="image2.jpg" alt="Lawn Image 2">
+          <img src="image3.jpg" alt="Lawn Image 3">
+        </div>
+      </section>
+      <section id="reviews">
+        <h2>Reviews</h2>
+        <div class="review-container" id="review-container">
+          <div class="review" id="review-1">
+            <h3>John Doe</h3>
+            <p>"I couldn't be happier with the service I received from Lawn Service. They were prompt, professional, and did an excellent job on my lawn."</p>
+          </div>
+          <div class="review" id="review-2">
+            <h3>Jane Smith</h3>
+            <p>"I've used Lawn Service for years and they never disappoint. Their attention to detail and commitment to quality is unmatched."</p>
+          </div>
+        </div>
+      </section>
+      <section id="videos">
+        <h2>Videos</h2>
+        <div class="video-container" id="video-container">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Lawn Service Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2023 Lawn Service</p>
+    </footer>
+  </body>
+</html>
