@@ -18,19 +18,7 @@
       </nav>
     </header>
     <main>
-      <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Fill out the form below to get in touch:</p>
-        <form id="contact-form">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email">
-          <label for="message">Message:</label>
-          <textarea id="message" name="message"></textarea>
-          <button type="submit" id="submit-btn">Send</button>
-        </form>
-      </section>
+
       <section id="gallery">
         <h2>Gallery</h2>
         <div class="gallery-container" id="gallery-container">
@@ -39,6 +27,7 @@
           <img src="image3.jpg" alt="Lawn Image 3">
         </div>
       </section>
+
       <section id="reviews">
         <h2>Reviews</h2>
         <div class="review-container" id="review-container">
@@ -47,20 +36,53 @@
             <p>"I couldn't be happier with the service I received from Lawn Service. They were prompt, professional, and did an excellent job on my lawn."</p>
           </div>
           <div class="review" id="review-2">
-            <h3>Jane Smith</h3>
+            <h3>Jane Dawson</h3>
             <p>"I've used Lawn Service for years and they never disappoint. Their attention to detail and commitment to quality is unmatched."</p>
           </div>
         </div>
       </section>
+
       <section id="videos">
         <h2>Videos</h2>
         <div class="video-container" id="video-container">
           <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Lawn Service Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </section>
+
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Fill out the form below to get in touch:</p>
+        <form id="contact-form">
+          <label for="name">Name for Inquiry & Future Communications:</label>
+          <input type="text" id="name" name="name">
+          <label for="address">Address of Proposed Worksite:</label>
+          <input type="text" id="address" name="address">
+          <label for="phone">Phone Number for Future Communications:</label>
+          <input type="text" id="phone" name="phone">
+          <label for="notes">Additional Notes / Project Specifications:</label>
+          <textarea id="notes" name="notes"></textarea>
+          <button type="button" id="submit-btn" onclick="sendEmail()">Send</button>
+        </form>
+      </section>
+      <script>
+        function sendEmail() {
+          var name = document.getElementById('name').value;
+          var address = document.getElementById('address').value;
+          var phone = document.getElementById('phone').value;
+          var notes = document.getElementById('notes').value;
+      
+          var body = 'Name: ' + name + '\nAddress: ' + address + '\nPhone: ' + phone + '\nAdditional Notes: ' + notes;
+          body = encodeURIComponent(body);
+      
+          var mailtoLink = 'mailto:bus.griff@gmail.com?subject=Request for Lawn Services from Zeal Gardens Website&body=' + body;
+      
+          window.open(mailtoLink, '_blank');
+        }
+      </script>
+      
     </main>
     <footer>
-      <p>&copy; 2023 Lawn Service</p>
+      <p>&copy; 2023 Zeal Gardens</p>
     </footer>
   </body>
 </html>
